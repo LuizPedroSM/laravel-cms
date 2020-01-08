@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Laravel CMS',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => ' - Laravel CMS',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Laravel</b> CMS',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image-xl',
     'logo_img_xl' => null,
@@ -138,9 +138,9 @@ return [
 
     'logout_url' => 'logout',
 
-    'login_url' => 'login',
+    'login_url' => 'painel/login',
 
-    'register_url' => 'register',
+    'register_url' => 'painel/register',
 
     'password_reset_url' => 'password/reset',
 
