@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'Site\HomeController@index');
+
+Route::prefix('painel')->group(function ()
+{
+    Route::get('/', 'Admin\HomeController@index');
 });
