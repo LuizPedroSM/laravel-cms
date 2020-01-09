@@ -201,17 +201,18 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'can'         => 'edit-users'
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Configurações'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Configurações do Site',
+            'url'  => 'painel/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Meu Perfil',
+            'url'  => 'painel/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-        // [
-        //     'text' => 'change_password',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-lock',
-        // ],
+
         // [
         //     'text'    => 'multilevel',
         //     'icon'    => 'fas fa-fw fa-share',
