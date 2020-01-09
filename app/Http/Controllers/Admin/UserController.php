@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -18,9 +23,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(1);
+        $users = User::paginate(10);
+        $loggedId = intval(Auth::id());
         $data = [
-            'users' => $users
+            'users' => $users,
+            'loggedId' => $loggedId
         ];
         return view('admin.users.index', $data);
     }
