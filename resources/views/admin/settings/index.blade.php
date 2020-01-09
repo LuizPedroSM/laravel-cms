@@ -16,35 +16,35 @@
                 <div class="form-group row">
                     <label for="title" class="col-sm-2 col-form-label">Titulo do Site</label>
                     <div class="col-sm-10">
-                        <input type="text" name="title" id="title" class="form-control">
+                        <input type="text" name="title" id="title" class="form-control" value="{{$settings['title']}}">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="subtitle" class="col-sm-2 col-form-label">Sub-titulo do Site</label>
                     <div class="col-sm-10">
-                        <input type="text" name="subtitle" id="subtitle" class="form-control">
+                        <input type="text" name="subtitle" id="subtitle" class="form-control" value="{{$settings['subtitle']}}">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">E-mail para contato</label>
                     <div class="col-sm-10">
-                        <input type="email" name="email" id="email" class="form-control">
+                        <input type="email" name="email" id="email" class="form-control" value="{{$settings['email']}}">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="bgcolor" class="col-sm-2 col-form-label">Cor do fundo</label>
                     <div class="col-sm-10">
-                        <input type="color" name="bgcolor" id="bgcolor" class="form-control">
+                        <input type="color" name="bgcolor" id="bgcolor" class="form-control" value="{{$settings['bgcolor']}}">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="textcolor" class="col-sm-2 col-form-label">Cor do texto</label>
                     <div class="col-sm-10">
-                        <input type="color" name="textcolor" id="textcolor" class="form-control">
+                        <input type="color" name="textcolor" id="textcolor" class="form-control" value="{{$settings['textcolor']}}">
                     </div>
                 </div>
                 
