@@ -27,4 +27,6 @@ Route::prefix('painel')->group(function ()
 
     // Route::post('users', 'Admin\UserController@index')->name('users');
     Route::resource('users', 'Admin\UserController');
+
+    Route::get('profile', 'Admin\ProfileController@index')->name('profile');
 });
