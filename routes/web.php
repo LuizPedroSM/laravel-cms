@@ -27,6 +27,7 @@ Route::prefix('painel')->group(function ()
 
     // Route::post('users', 'Admin\UserController@index')->name('users');
     Route::resource('users', 'Admin\UserController');
+    Route::resource('pages', 'Admin\PageController');
 
     Route::get('profile', 'Admin\ProfileController@index')->name('profile');
     Route::put('profilesave', 'Admin\ProfileController@save')->name('profile.save');    
