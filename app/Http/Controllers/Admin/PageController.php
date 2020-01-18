@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Page;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class PageController extends Controller
 {
@@ -35,7 +35,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.create');
     }
 
     /**
@@ -46,7 +46,30 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->only([
+            'title',
+            'body'
+        ]);
+
+        $data['slug'] = Str::slug($data['title'], '-');
+
+        $validator = Validator::make($data, [
+            'title' => ['required', 'string', 'max:100'],
+            'body'  => ['string'],
+            'slug' => ['required', 'string', 'max:100', 'unique:pages']
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->route('pages.create')->withErrors($validator)->withInput();
+        }
+     
+        $page = new Page;
+        $page->title = $data['title'];
+        $page->slug = $data['slug'];
+        $page->body = $data['body'];
+        $page->save();
+
+        return redirect()->route('pages.index');
     }
 
     /**
