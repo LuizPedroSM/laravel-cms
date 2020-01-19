@@ -86,8 +86,7 @@
                                 </a>
                             </div>
                             <p>
-                                Firmament morning sixth subdue darkness
-                                creeping gathered divide.
+                                {{$front_config['subtitle']}}
                             </p>
                             <div class="socail_links">
                                 <ul>
