@@ -87,7 +87,7 @@ window.onload = function() {
         data:{
             datasets:[{
                 data:{{$pageValues}},
-                backgroundColor:'#0000ff'
+                backgroundColor:['#000000','#ff0000','#ffff00','#ffffff','#0000ff','#00ffff','#00ff00','#ff00ff',]
             }],
             labels:{!!$pageLabels!!}
         },
